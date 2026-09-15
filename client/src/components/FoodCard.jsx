@@ -10,8 +10,6 @@ function FoodCard({ item, onClaimed, defaultName = "" }) {
   useEffect(() => {
     if (defaultName) setName(defaultName);
   }, [defaultName]);
-  const [busy, setBusy] = useState(false);
-  const claimed = item.status === "claimed";
 
   async function claim() {
     if (!name.trim()) return;
